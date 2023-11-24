@@ -14,6 +14,17 @@ public class CommentService {
         return "SUCCESS";
     }
 
+    @ToLog
+    public String deleteComment(Comment comment){
+        logger.info("Delete comment: " + comment.getText());
+        return "SUCCESS";
+    }
+
+    public String editComment(Comment comment){
+        logger.info("Edit comment: " + comment.getText());
+        return "SUCCESS";
+    }
+
     public void setLogger(Logger logger) {
         this.logger = logger;
     }
